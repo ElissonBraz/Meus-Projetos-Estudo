@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import entities.ProductVect;
 
-
 public class ProgramVectPrice {
     public static void main(String[] args) {
 
