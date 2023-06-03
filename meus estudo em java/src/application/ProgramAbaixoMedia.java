@@ -26,7 +26,6 @@ public class ProgramAbaixoMedia {
         for (int i = 0; i < vect.length; i++) {
             media += vect[i].getNumeroReal();
         }
-        media = media / n.getNumero();
         System.out.println(String.format("MEDIA DO VETOR = %.3f", media));
 
         System.out.println("ELEMENTOS ABAIXO DA MEDIA:");
