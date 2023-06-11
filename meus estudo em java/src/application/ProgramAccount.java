@@ -5,10 +5,12 @@ import java.util.Scanner;
 
 import entities.Account;
 
+
 public class ProgramAccount {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
         Scanner leia = new Scanner(System.in);
+
         Account account;
 
         System.out.print("Enter account number: ");
