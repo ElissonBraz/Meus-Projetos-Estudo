@@ -18,6 +18,7 @@ public class ProgramRent {
          int n = ent.nextInt();
 
          for (int i = 1; i <= n; i++) {
+            System.out.println("");
             System.out.println("Rent #" + i + ":");
             System.out.print("Name: ");
             String name = ent.next();
@@ -27,8 +28,14 @@ public class ProgramRent {
             int roomNumber = ent.nextInt();
             vect[roomNumber] = new Rent(name, email);
          }
-
-
+         
+         System.out.println("");
+         System.out.println("Busy rooms: ");
+         for (int i = 0; i < 10; i++) {
+            if (vect[i] != null) {
+                System.out.println(i + ": " + vect[i]);
+            }
+         }
          ent.close();
     }
 
