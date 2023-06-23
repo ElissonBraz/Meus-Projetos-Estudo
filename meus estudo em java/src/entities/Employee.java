@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.List;
+
 public class Employee {
     private Integer id;
     private String name;
@@ -41,8 +43,23 @@ public class Employee {
 
 
     public void increaseSalary(Double percentage) {
-        this.setSalary(this.getSalary() * percentage / 100.0);
+        this.setSalary(this.getSalary() + this.getSalary() * percentage / 100.0);
 
+    }
+
+    public Integer position(List<Employee> list, int id){
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return null;
+        
+    }
+
+    public Boolean hasId(List<Employee> list, int id){
+        Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return emp != null;
     }
 
     @Override

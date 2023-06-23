@@ -7,16 +7,7 @@ import java.util.Scanner;
 
 import entities.Employee;
 
-/* Fazer um programa para ler um número inteiro N e depois os dados (id, nome e salario) de
- * N funcionários.Não deve haver repetição de id.
- * Em seguida, efetuar o aumento de X por cento no salário de um determinado funcionário. Para isso,
- * o programa deve ler um id e o valor X. Se o id informado não existir, mostrar uma mensagem e abortar
- * a operação. Ao final, mostrar a listagem atualizada dos funcionários, conforme exemplos.
- * Lembre-se de aplicar a técnica de encapsulamento para não permitir que o salário possa ser mudado
- * livremente. Um salário só pode ser aumentado com base em uma operação de aumento por porcentagem dada.
- */
-
-public class AppliEmployee {
+public class AppliEmployee2 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner ent = new Scanner(System.in);
@@ -45,10 +36,11 @@ public class AppliEmployee {
             list.add(emp);
         }
 
-        Employee employee = new Employee();
+        System.out.println();
         System.out.print("Salary Increase: ");
         int idSalary = ent.nextInt();
-        Integer pos = employee.position(list, idSalary);
+        
+        Employee pos = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
         
         if (pos == null ) {
             System.out.println("This id does not exist!");
@@ -56,7 +48,7 @@ public class AppliEmployee {
         } else {
             System.out.print("Enter the percentege: ");
             double percent  = ent.nextDouble();
-            list.get(pos).increaseSalary(percent);
+            pos.increaseSalary(percent);
         }
         
         System.out.println();
