@@ -1,5 +1,5 @@
 package entities;
-
+/* Aula do Curso em Java POO da Gustavo Guanabara Aula 06*/
 public class ControleRemoto implements Controlador{
 
 /* Atributos */

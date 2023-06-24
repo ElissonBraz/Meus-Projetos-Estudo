@@ -1,5 +1,6 @@
 package application;
 
+/* Aula do Curso em Java POO da Gustavo Guanabara Aula 06*/
 import entities.ControleRemoto;
 
 public class Aula {
