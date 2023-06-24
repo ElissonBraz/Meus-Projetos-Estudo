@@ -1,6 +1,4 @@
 package entities;
-/* Aula do Curso em Java POO da Gustavo Guanabara Aula 06*/
-import visual.Controlador;
 
 public class ControleRemoto implements Controlador{
 
@@ -60,12 +58,12 @@ public class ControleRemoto implements Controlador{
 
     @Override
     public void abrirMenu() {
-        System.out.println("------");
-        System.out.println("Estpa Ligado? " + this.isLigado());
+        System.out.println("------ MENU ------");
+        System.out.println("Está Ligado? " + this.isLigado());
         System.out.println("Está Tocando? " + this.getVolume());
         System.out.println("Volume: " + this.getVolume());
-        for (int i = 0; i <= this.getVolume(); i+=10) {
-            System.out.println("|");
+        for (int i = 1; i <= this.getVolume(); i+=10) {
+            System.out.print("|");
         }
         System.out.println("");
     }
@@ -79,6 +77,8 @@ public class ControleRemoto implements Controlador{
     public void maisVolume() {
         if (this.isLigado()) {
             this.setVolume(this.getVolume() + 5);
+        } else {
+            System.out.println("Impossível aumentar o volume");
         }
     }
 
@@ -86,6 +86,8 @@ public class ControleRemoto implements Controlador{
     public void menosVolume() {
         if (this.isLigado()) {
             this.setVolume(this.getVolume() - 5);
+        } else {
+            System.out.println(" Impossível diminuir o volume");
         }
     }
 
@@ -107,6 +109,8 @@ public class ControleRemoto implements Controlador{
     public void play() {
         if (this.isLigado() && ! (this.isTocando())) {
             this.setTocando(true);
+        } else {
+            System.out.println("Não conseguir reproduzir");
         }
     }
 
@@ -114,6 +118,8 @@ public class ControleRemoto implements Controlador{
     public void pause() {
         if (this.isLigado() && this.isTocando()) {
             this.setTocando(false);
+        } else {
+            System.out.println("Não conseguir pausar");
         }
     }
 

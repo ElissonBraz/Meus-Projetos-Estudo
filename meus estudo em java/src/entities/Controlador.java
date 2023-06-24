@@ -1,4 +1,4 @@
-package visual;
+package entities;
 
 /* Aula do Curso em Java POO da Gustavo Guanabara Aula 06*/
 
