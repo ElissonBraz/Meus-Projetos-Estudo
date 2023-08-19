@@ -1,4 +1,4 @@
-package beecrowd;
+package classes;
 
 import java.util.Locale;
 import java.util.Scanner;
