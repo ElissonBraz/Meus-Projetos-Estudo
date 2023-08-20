@@ -28,7 +28,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Aluno: " + nome + ", Bairro:" + bairro;
+        return "Aluno: " + nome + ", Residente em : " + bairro;
     }
 
     

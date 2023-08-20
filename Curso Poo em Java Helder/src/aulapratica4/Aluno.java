@@ -51,9 +51,7 @@ public class Aluno extends Pessoa implements SituacaoAcademica {
 
     @Override
     public String toString() {
-        return super.toString() + "Média:" + media + "";
+        return super.toString() + ", tirou a média de : " + media + " sendo " + this.verificacaoAprovacao();
     }
-
-    
     
 }
